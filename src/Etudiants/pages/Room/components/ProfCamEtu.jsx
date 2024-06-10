@@ -1,4 +1,5 @@
-import Loader from "../../../component/Loader"
+
+import Loader from "../../../../component/Loader"
 import "./ProfCamEtu.css"
 
 const ProfCamEtu = () => {

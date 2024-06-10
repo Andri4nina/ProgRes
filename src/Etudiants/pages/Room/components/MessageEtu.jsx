@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BiSolidSend } from 'react-icons/bi';
 import './MessageEtu.css';
 import ListFolderEtu from './ListFolderEtu';
@@ -186,7 +186,7 @@ const MessageEtu = () => {
                     </div>
                 </div>
 
-                <div className={`absolute right-0 top-0 h-full transition-all duration-500 ${isFolderOpen ? 'w-72' : 'w-0 overflow-hidden'}`}>
+                <div className={`absolute right-0 top-0 h-full transition-all duration-500 w-96 ${isFolderOpen ? 'translate-x-0' : 'translate-x-full overflow-hidden'}`}>
                     <ListFolderEtu />
                 </div>
             </div>
