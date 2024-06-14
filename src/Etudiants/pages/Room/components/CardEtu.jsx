@@ -7,7 +7,7 @@ const CardEtu = () => {
         <div className="flex flex-col">
           <div className="relative w-20 h-20 rounded-full mx-auto border-4 my-5 border-blue-400 ">
             <div className="w-full h-full rounded-full overflow-hidden ">
-              <img src="./img/default.png" alt="userpdp" className=" object-contain" />
+              <img src="./../img/default.png" alt="userpdp" className=" object-contain" />
             </div>
           </div>
           <div><h3 className="text-center font-semibold text-slate-400">Popol</h3></div>

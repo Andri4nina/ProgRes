@@ -1,8 +1,11 @@
-import React from 'react'
+
+import { Outlet } from 'react-router-dom'
 
 const IndexProf = () => {
   return (
-    <div>IndexProf</div>
+    <section>
+      <Outlet />
+    </section>
   )
 }
 

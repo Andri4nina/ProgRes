@@ -1,13 +1,14 @@
-import { BiSolidLogIn, BiSolidLogOut, BiXCircle } from "react-icons/bi";
-import PopupRoomEtu from "./PopupRoomEtu";
+import { BiSolidCameraMovie, BiSolidLogIn, BiSolidLogOut, BiXCircle } from "react-icons/bi";
 import { useState } from "react";
 import { useSpring, animated } from 'react-spring';
 import Swal from 'sweetalert2';
+import PopupRoomProf from "./PopupRoomProf";
+import PopupCreateRoomProf from "./PopupCreateRoomProf";
 
 
-const ActionEtu = () => {
+const ActionProf = () => {
     const [isPopupVisible, setIsPopupVisible] = useState(false);
-
+    const [isPopupCreateVisible, setIsPopupCreateVisible] = useState(false);
 
     const handleLoginClick = () => {
         setIsPopupVisible(true);
@@ -15,7 +16,23 @@ const ActionEtu = () => {
 
     const handleClosePopup = () => {
         setIsPopupVisible(false);
+        setIsPopupCreateVisible(false);
     };
+    
+    const handleCloseCreatePopup = () => {
+        setIsPopupCreateVisible(false);
+    };
+    
+    
+    
+    const handleCreateClick = () => {
+        setIsPopupCreateVisible(true);
+    };
+
+   
+
+    
+    
 
     const handleLogoutClick = () => {
         Swal.fire({
@@ -44,6 +61,12 @@ const ActionEtu = () => {
         transform: isPopupVisible ? 'translateY(0)' : 'translateY(-40%)',
         config: { tension: 300, friction: 20 },
     });
+    
+    const popupCreateAnimation = useSpring({
+        opacity: isPopupCreateVisible ? 1 : 0,
+        transform: isPopupCreateVisible ? 'translateY(0)' : 'translateY(-40%)',
+        config: { tension: 300, friction: 20 },
+    });
 
     return (
         <>
@@ -51,7 +74,7 @@ const ActionEtu = () => {
                 <div>
                     <div className="flex items-center justify-center w-60">
                         <div className="w-56 mx-auto">
-                            <img src="./../img/Logo.png" alt="Logo emiting" className="" />
+                            <img src="./img/Logo.png" alt="Logo emiting" className="" />
                         </div>
                         <div>
                             <h2 className="text-2xl font-semibold text-center italic">Emiting</h2>
@@ -59,7 +82,14 @@ const ActionEtu = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 w-11/12 sm:w-1/2 mx-auto">
+                <div className="grid grid-cols-2 w-11/12 sm:w-1/2 mx-auto gap-2">
+                    <div className="group cursor-pointer relative text-white rounded-md bg-blue-300 hover:bg-blue-600 hover:shadow-md hover:shadow-blue-600 transition-all w-full h-36 flex items-center justify-center"
+                        onClick={handleCreateClick}>
+                        
+                        <BiSolidCameraMovie  className="text-7xl" />
+                        <span className="text-5xl absolute top-1/2 left-1/2 -translate-x-[65%] -translate-y-[45%] text-blue-300 group-hover:text-blue-600 transition-all">+</span>
+                    </div>
+                    
                     <div className="cursor-pointer text-white rounded-md bg-blue-300 hover:bg-blue-600 hover:shadow-md hover:shadow-blue-600 transition-all w-full h-36 flex items-center justify-center"
                         onClick={handleLoginClick}>
                         <BiSolidLogIn className="text-7xl" />
@@ -75,7 +105,21 @@ const ActionEtu = () => {
                             >
                                 <BiXCircle className="text-xl hover:text-red-500" />
                             </button>
-                            <PopupRoomEtu />
+                            <PopupRoomProf />
+                        </animated.div>
+                    </div>
+                )}
+                
+                {isPopupCreateVisible && (
+                    <div className="z-20 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <animated.div style={popupCreateAnimation} className="relative bg-white p-6 rounded-md w-96">
+                            <button
+                                className="absolute top-2 right-2 text-gray-500"
+                                onClick={handleCloseCreatePopup}
+                            >
+                                <BiXCircle className="text-xl hover:text-red-500" />
+                            </button>
+                            <PopupCreateRoomProf />
                         </animated.div>
                     </div>
                 )}
@@ -90,4 +134,4 @@ const ActionEtu = () => {
     );
 }
 
-export default ActionEtu;
+export default ActionProf;

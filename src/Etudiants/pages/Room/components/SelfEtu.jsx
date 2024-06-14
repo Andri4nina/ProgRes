@@ -18,7 +18,7 @@ const SelfEtu = () => {
                 <div className="flex flex-col">
                     <div className="relative w-20 h-20 rounded-full mx-auto border-4 my-5 border-blue-400 ">
                         <div className="w-full h-full rounded-full overflow-hidden ">
-                            <img src="./img/default.png" alt="userpdp" className=" object-contain" />
+                            <img src="./../img/default.png" alt="userpdp" className=" object-contain" />
                         </div>
                         <div className="absolute right-1 top-0 w-3 h-3 rounded-full bg-green-500">
                         </div>

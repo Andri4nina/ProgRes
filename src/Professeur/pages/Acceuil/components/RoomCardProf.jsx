@@ -1,11 +1,11 @@
 
 
-const RoomCardEtu = () => {
+const RoomCardProf = () => {
     return (
         <>
             <div className="group relative cursor-pointer overflow-hidden h-32">
                 <div className="relative">
-                    <img src="./../img/prof.jpg" alt="" className="w-full h-auto" />
+                    <img src="./img/prof.jpg" alt="" className="w-full h-auto" />
                     <div className="absolute group-hover:inset-0 group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:to-black transition-all"></div>
                 </div>
 
@@ -18,4 +18,4 @@ const RoomCardEtu = () => {
     )
 }
 
-export default RoomCardEtu
+export default RoomCardProf
