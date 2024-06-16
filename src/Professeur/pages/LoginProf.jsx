@@ -34,18 +34,14 @@ const LoginProf = () => {
       title: 'Succès',
       text: 'Connexion avec succès',
     }).then(() => {
-      navigate('/Acceuil');
+      navigate('Professeur');
     });
   };
 
   return (
     <>
       <section className='h-screen w-full flex justify-center items-center'>
-        <div className='hidden sm:block w-1/2 relative h-auto'>
-          <img src="./img/GpVideo.png" alt="GpVideo.png" className='w-full h-auto' />
-        </div>
-
-        <div className='w-11/12 mx-auto sm:w-1/2 sm:flex sm:justify-center sm:items-center relative'>
+        <div className='w-11/12 mx-autosm flex sm:justify-center sm:items-center relative'>
           <div className='w-full sm:w-96'>
             <div className="w-full grid grid-cols-1 justify
             center items-center">
