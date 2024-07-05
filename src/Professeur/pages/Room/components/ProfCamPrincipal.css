@@ -1,0 +1,75 @@
+.screensize div {
+    position: absolute;
+    width: 10px;
+    height: 3px;
+    background-color: #e1e1e1;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.screensize:hover div { 
+    width: 7px;
+    height: 2px;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.screensize div::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 10px;
+    background-color: #e1e1e1;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.screensize:hover div::before {
+    width: 2px;
+    height: 7px;
+    transition: all .5 cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.screensize div:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.screensize div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.screensize div:nth-child(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.screensize div:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.screensize div:nth-child(1)::before {
+    top: 0;
+    left: 0;
+}
+
+.screensize div:nth-child(2)::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.screensize div:nth-child(3)::before {
+    bottom: 0;
+    left: 0;
+}
+
+.screensize div:nth-child(4)::before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

@@ -67,7 +67,7 @@ const LoginProf = () => {
               <div className="w-full bg-white mb-10 border rounded-md">
                 <input
                   type="password"
-                  placeholder="Votre Mot de passe"
+                  placeholder="Votre mot de passe"
                   className="px-5 py-4 w-full outline-none"
                   value={mdp}
                   onChange={(e) => setMdp(e.target.value)}

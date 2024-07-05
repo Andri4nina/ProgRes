@@ -7,6 +7,7 @@ import IndexEtu from "./Etudiants/IndexEtu";
 import IndexProf from "./Professeur/IndexProf";
 import AcceuilProf from "./Professeur/pages/Acceuil/AcceuilProf";
 import Index from "./Index";
+import RoomProf from "./Professeur/pages/Room/RoomProf";
 
 function App() {
     const etuUser = localStorage.getItem('EtuUser');
@@ -19,7 +20,7 @@ function App() {
                     <Route index element={<Index />} />
 
                     {/* Vérification et redirection pour les étudiants */}
-                    <Route path="/Etudiant" element={etuUser ? <IndexEtu /> : <Navigate to="/" />}>
+                    <Route path="/Etudiant" element={etuUser ? <IndexEtu /> : <IndexEtu />}>
 
                         <Route index element={<AcceuilEtu />} />
                         <Route path="RoomEtu/Detail" element={<RoomDetailEtu />} />
@@ -34,16 +35,16 @@ function App() {
                     </Route>
 
                     {/* Vérification et redirection pour les professeurs */}
-                    <Route path="/Professeur" element={profUser ? <IndexProf /> : <Navigate to="/" />}>
+                    <Route path="/Professeur" element={profUser ? <IndexProf /> : <IndexProf />}>
 
                         <Route index element={<AcceuilProf />} />
-                        <Route path="RoomEtu/Detail" element={<RoomDetailEtu />} />
+                        <Route path="RoomProf/Detail" element={<RoomDetailEtu />} />
 
                         <Route
-                            path="RoomEtu"
+                            path="RoomProf"
                             element={
                                 <SocketIOProvider>
-                                    <RoomEtu />
+                                    <RoomProf />
                                 </SocketIOProvider>
                             }
                         />
