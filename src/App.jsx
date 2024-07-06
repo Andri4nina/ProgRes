@@ -8,6 +8,7 @@ import IndexProf from "./Professeur/IndexProf";
 import AcceuilProf from "./Professeur/pages/Acceuil/AcceuilProf";
 import Index from "./Index";
 import RoomProf from "./Professeur/pages/Room/RoomProf";
+import RoomDetailProf from "./Professeur/pages/Room/RoomDetailProf";
 
 function App() {
     const etuUser = localStorage.getItem('EtuUser');
@@ -38,7 +39,7 @@ function App() {
                     <Route path="/Professeur" element={profUser ? <IndexProf /> : <IndexProf />}>
 
                         <Route index element={<AcceuilProf />} />
-                        <Route path="RoomProf/Detail" element={<RoomDetailEtu />} />
+                        <Route path="RoomProf/Detail" element={<RoomDetailProf />} />
 
                         <Route
                             path="RoomProf"
