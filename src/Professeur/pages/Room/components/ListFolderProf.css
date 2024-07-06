@@ -1,0 +1,15 @@
+.folder::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.folder::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  background-color: #0004;
+}
+.folder:hover::-webkit-scrollbar-thumb{
+  visibility: visible;
+}

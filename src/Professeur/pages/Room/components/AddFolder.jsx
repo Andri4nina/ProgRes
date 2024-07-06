@@ -24,7 +24,7 @@ const AddFolder = () => {
     return (
         <>
             <div 
-                className={`relative w-60 h-60 border-2 border-slate-200 border-dashed ${isDragOver ? 'border-blue-500' : 'border-slate-200'}`} 
+                className={`relative min-w-60 w-full min-h-60 h-full border-2 border-slate-200 border-dashed ${isDragOver ? 'border-blue-500' : 'border-slate-200'}`} 
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
