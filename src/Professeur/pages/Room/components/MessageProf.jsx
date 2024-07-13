@@ -19,7 +19,7 @@ const MessageProf = () => {
                         </div>
 
                         <div className=" my-10 relative flex justify-end gap-2  othersMess">
-                            <div className="text-white max-w-72 w-fit h-fit px-5 py-2 rounded-lg bg-blue-400">
+                            <div className="text-white max-w-72 w-fit h-fit px-5 py-2 rounded-lg bg-[#007aff]">
                                 Bonjour
                             </div>
                             <div className="w-10 h-10 ">
@@ -35,7 +35,7 @@ const MessageProf = () => {
                         </div>
 
                         <div className="my-10 relative flex justify-end gap-2  othersMess">
-                            <div className="text-white max-w-72 w-fit h-fit px-5 py-2 rounded-lg bg-blue-400">
+                            <div className="text-white max-w-72 w-fit h-fit px-5 py-2 rounded-lg bg-[#007aff]">
                                 J'ai une question vous pouvez me repondre?
                             </div>
                             <div className="w-10 h-10 ">
@@ -82,7 +82,7 @@ const MessageProf = () => {
                         </div>
 
                         <div className="my-10 relative flex justify-end gap-2  othersMess">
-                            <div className="text-white max-w-72 w-fit h-fit px-5 py-2 rounded-lg bg-blue-400">
+                            <div className="text-white max-w-72 w-fit h-fit px-5 py-2 rounded-lg bg-[#007aff]">
                                 J'ai une question vous pouvez me repondre?
                             </div>
                             <div className="w-10 h-10 ">

@@ -11,45 +11,35 @@ const LoginProf = () => {
     e.preventDefault();
 
     // Logique de validation des erreurs
-    if (!identifier) {
+    if (!identifier || !mdp) {
       Swal.fire({
-        icon: 'error',
-        title: 'Erreur',
-        text: 'Identifiant erroné',
+        icon: "error",
+        title: "Erreur",
+        text: "Veuillez remplir tous les champs!",
       });
       return;
     }
 
-    if (!mdp) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Erreur',
-        text: "Nom d'utilisateur vide",
-      });
-      return;
-    }
+   navigate("Professeur");
 
-    Swal.fire({
-      icon: 'success',
-      title: 'Succès',
-      text: 'Connexion avec succès',
-    }).then(() => {
-      navigate('Professeur');
-    });
   };
 
   return (
     <>
-      <section className='h-screen w-full flex justify-center items-center'>
-        <div className='w-11/12 mx-autosm flex sm:justify-center sm:items-center relative'>
-          <div className='w-full sm:w-96'>
-            <div className="w-full grid grid-cols-1 justify
-            center items-center">
+      <section className="h-screen w-full flex justify-center items-center">
+        <div className="w-11/12 mx-autosm flex sm:justify-center sm:items-center relative">
+          <div className="w-full sm:w-96">
+            <div
+              className="w-full grid grid-cols-1 justify
+            center items-center"
+            >
               <div className="w-56 mx-auto">
                 <img src="./img/Logo.png" alt="Logo emiting" className="" />
               </div>
               <div className="-translate-y-full -mt-10">
-                <h2 className="text-2xl font-semibold text-center italic">Emiting</h2>
+                <h2 className="text-2xl font-semibold text-center italic">
+                  Emiting
+                </h2>
               </div>
             </div>
 
@@ -77,7 +67,7 @@ const LoginProf = () => {
               <div className="w-full bg-white mb-5 border">
                 <button
                   type="submit"
-                  className="px-5 py-4 w-full outline-none text-white bg-blue-400 hover:bg-blue-600 hover:shadow-md hover:shadow-blue-600 transition-all rounded-md"
+                  className="px-5 py-4 w-full outline-none text-white bg-[#00A9FF] hover:bg-[#00A4EE] hover:shadow-md hover:shadow-[#00A4EE] transition-all rounded-md"
                 >
                   Se connecter
                 </button>
